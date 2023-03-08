@@ -1,0 +1,23 @@
+from django.db import models
+
+
+# Create a table called products
+class Product(models.Model):
+    prod_name = models.CharField(max_length=30, blank=False, null=False)
+    prod_quantity = models.CharField(max_length=30, blank=False, null=False)
+    prod_price = models.CharField(max_length=30, blank=False, null=False)
+
+
+def __str__(self):
+    return self.prod_name
+
+
+# Create a table called supplier
+class Supplier(models.Model):
+    supp_name = models.CharField(max_length=30, blank=False, null=False)
+    supp_email = models.EmailField(max_length=30, blank=False, null=False)
+    supp_goods = models.CharField(max_length=30, blank=False, null=False)
+
+
+def __str__(self):
+    return self.supp_name
